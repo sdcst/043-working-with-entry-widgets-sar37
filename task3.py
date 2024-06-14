@@ -7,6 +7,21 @@ by the buttons and display the entry in the 3rd entry widget;
 
 import tkinter as tk
 
+def divided(event):
+    N = e[0].get()
+    NN = e[1].get()
+
+    try:
+        N = float(N)
+        NN = float(NN)
+        X = N/NN
+        e[2].delete(0,tk.END)
+        e[2].insert(0,X)
+        text.config(text = "No Errors")
+
+    except:
+        text.config(text = 'Oh no! That entry did not work, try again....')
+
 w = tk.Tk()
 w.attributes("-topmost",True)
 
